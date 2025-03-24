@@ -20,6 +20,7 @@ $data = ambildata($query);
 </head>
 <body>
     <h1>DATA MAHASISWA</h1>
+    <a href="tambahmahasiswa.php">Tambah</a>
     <table border="1" cellspasing="0" cellpadding="5" >
         <thead>
                 <th>No</th>
