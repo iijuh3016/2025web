@@ -5,8 +5,9 @@ $database = "4ami";
 $username = "root";
 $password = "";
 
-$query = "SELECT * FROM mahasiswa";
+$query = "SELECT m .*, p.nama namaProdi FROM `mahasiswa`m JOIN prodi p ON m.id = p.id";
 $data = ambildata($query);
+
    
 
 ?>
@@ -29,6 +30,10 @@ $data = ambildata($query);
                 <th>tanggalLahir</th>
                 <th>telp</th>
                 <th>email</th>
+                <th>prodi</th>
+                <th>Aksi</th>   
+
+                
         </thead>
         <tbody>
             
@@ -42,6 +47,10 @@ $data = ambildata($query);
                 <td><?php echo $d["tanggalLahir"]?></td>
                 <td><?php echo $d["telp"]?></td>
                 <td><?php echo $d["email"]?></td>
+                <td><?php echo $d["namaProdi"]?></td>
+                <td><a href="editmahasiswa.php?nim=<?php echo $d['nim']?>">Edit</a> | <a href="deletemahasiswa.php?nim=<?php echo $d['nim']?>"
+                onclick="return confirm('handak mehapus kah?')">delete</a></td></td>
+
             </tr>
             <?php endforeach; ?>
            
