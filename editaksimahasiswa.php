@@ -13,6 +13,7 @@ $telp = $_POST["telp"];
 $email = $_POST["email"];
 $id = $_POST["id"];
 
+
 $query = "UPDATE mahasiswa SET nama = '$nama', tanggalLahir = '$tanggalLahir', telp = '$telp', email = 
 '$email', id = '$id' WHERE nim = '$nim'";
 

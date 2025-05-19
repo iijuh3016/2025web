@@ -92,3 +92,7 @@ include "template/sidebar.php";
     <!--end::App Content-->
 </main>
 <!--end::App Main-->
+
+<?php
+include "template/footer.php";
+?>
